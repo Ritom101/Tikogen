@@ -4,12 +4,18 @@
     <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script>
-      // Redirect everything to root (index.html) so React Router can handle it
-      const redirectTo = window.location.origin + '/';
-      window.location.replace(redirectTo);
+      // This forces scroll reset and refreshes routing
+      window.onload = function () {
+        if ("scrollRestoration" in history) {
+          history.scrollRestoration = "manual";
+        }
+
+        const newPath = location.pathname.replace(/\/$/, "") + "/index.html";
+        window.location.replace(newPath);
+      };
     </script>
   </head>
   <body>
-    <p>Redirecting...</p>
+    <p>Redirecting to Tikogen...</p>
   </body>
 </html>
