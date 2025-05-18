@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>Redirecting...</title>
+    <meta charset="UTF-8" />
+    <title>Redirecting to Tikogen...</title>
     <script>
-      // This forces scroll reset and refreshes routing
-      window.onload = function () {
-        if ("scrollRestoration" in history) {
-          history.scrollRestoration = "manual";
-        }
-
-        const newPath = location.pathname.replace(/\/$/, "") + "/index.html";
-        window.location.replace(newPath);
+      const redirect = () => {
+        const pathname = window.location.pathname;
+        const redirectPath = pathname.replace(/\/index\.html$/, "");
+        const url = redirectPath || "/";
+        window.location.replace(url);
       };
+      redirect();
     </script>
   </head>
   <body>
