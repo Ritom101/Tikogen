@@ -26,8 +26,8 @@ body::before {
   /* Full purple glow circle with soft edges */
   background: radial-gradient(
     circle 400px at var(--cursor-x, 50%) var(--cursor-y, 50%),
-    rgba(220, 156, 236, 0.4) 0%,        /* Deep purple inner */
-    rgba(171, 124, 183, 0.2) 40%,       /* Medium fade */
+    rgba(133, 138, 227, 0.4) 0%,        /* Deep blue inner */
+    rgba(184, 136, 196, 0.2) 40%,       /* Medium fade */
     rgba(166, 121, 177, 0.1) 70%,       /* Soft edge */
     rgba(169, 138, 177, 0.01) 95%,      /* Almost gone */
     transparent 100%
@@ -106,4 +106,40 @@ html {
     linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
   background-size: 40px 40px;
+  position: absolute;
+  z-index: -10;         /* pushes grid to back */
+  inset: 0;
+  pointer-events: none; /* disables interaction */
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* ✅ index.css (global styles) */
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }

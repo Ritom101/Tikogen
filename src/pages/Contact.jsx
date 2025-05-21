@@ -80,7 +80,7 @@ export default function ContactPage() {
 
       {/* ❄️ Page Header */}
       <section className="pt-36 pb-4 text-center">
-        <h1 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 drop-shadow-md">
+        <h1 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-pink-500 drop-shadow-md">
           Let’s Discuss Together
         </h1>
         <p className="mt-2 text-gray-600 text-sm sm:text-base">
@@ -98,7 +98,7 @@ export default function ContactPage() {
         {!showForm && (
           <button
             onMouseEnter={() => setShowForm(true)}
-            className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold text-sm py-2 px-6 rounded-xl shadow-lg hover:scale-105 transition-all"
+            className="bg-gradient-to-r from-blue-500 to-pink-500 text-white font-semibold text-sm py-2 px-6 rounded-xl shadow-lg hover:scale-105 transition-all"
           >
             Send Message
           </button>
@@ -134,7 +134,7 @@ export default function ContactPage() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-full focus:ring-purple-500 focus:border-purple-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-full focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
             <div>
@@ -148,7 +148,7 @@ export default function ContactPage() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-full focus:ring-purple-500 focus:border-purple-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-full focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
             <div>
@@ -161,7 +161,7 @@ export default function ContactPage() {
                 placeholder="Your Company"
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-full focus:ring-purple-500 focus:border-purple-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-full focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
             <div>
@@ -172,7 +172,7 @@ export default function ContactPage() {
                 name="reason"
                 value={formData.reason}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-full focus:ring-purple-500 focus:border-purple-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-full focus:ring-blue-500 focus:border-blue-500"
               >
                 <option value="">Select a reason</option>
                 <option value="Demo Request">Demo Request</option>
@@ -191,7 +191,7 @@ export default function ContactPage() {
                 onChange={handleChange}
                 rows={3}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-full focus:ring-purple-500 focus:border-purple-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-full focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
 
@@ -201,8 +201,8 @@ export default function ContactPage() {
               disabled={isSending}
               className={`w-full font-semibold py-2 rounded-full text-white transition ${
                 isSending
-                  ? "bg-purple-300 cursor-not-allowed"
-                  : "bg-gradient-to-r from-purple-500 to-pink-500 hover:shadow-md"
+                  ? "bg-blue-300 cursor-not-allowed"
+                  : "bg-gradient-to-r from-blue-500 to-pink-500 hover:shadow-md"
               }`}
             >
               {isSending ? "Sending..." : "Send Message"}

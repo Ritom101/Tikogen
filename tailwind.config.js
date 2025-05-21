@@ -15,7 +15,10 @@ module.exports = {
       colors: {
         primary: '#7C3AED',
       },
-    },
+      transformOrigin: {
+        'center': 'center',
+      },
+      },
   },
   plugins: [],
 }
